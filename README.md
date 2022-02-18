@@ -1,3 +1,32 @@
+
+# Tracing Initial Empirical Run
+
+Make sure 16686 and 8080 are free
+
+
+### Tracing file 
+
+tracing-"x"-"y".json is the json file for tracing details for API 
+
+**NOTE -->** These fileS are created manually not auto-generated
+
+* localhost:8080/firstService/app/x/y
+
+
+to start run 
+
+`docker-compose up` 
+
+port localhost:8080/firstService/app/x/y  -- x,y are params
+
+
+
+Open Jaeger at `localhost:16686` 
+
+
+Tracing Implementation based on https://tracing.cloudnative101.dev/docs/lab-jaeger-nodejs.html#_tracing_a_function
+
+
 # Typescript Framework
 
 ### Commands to Start Server
