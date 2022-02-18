@@ -1,0 +1,324 @@
+{
+    "data": [
+        {
+            "traceID": "3d83a126469eb35c",
+            "spans": [
+                {
+                    "traceID": "3d83a126469eb35c",
+                    "spanID": "3f3bee72e68141d5",
+                    "flags": 1,
+                    "operationName": "format-greeting",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "3d83a126469eb35c",
+                            "spanID": "619fe7914f72e388"
+                        }
+                    ],
+                    "startTime": 1645157811550000,
+                    "duration": 1000,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1645157811550000,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "format"
+                                },
+                                {
+                                    "key": "message",
+                                    "type": "string",
+                                    "value": "formatting message remotely for name Carlos"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1645157811551000,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "propagation"
+                                },
+                                {
+                                    "key": "message",
+                                    "type": "string",
+                                    "value": "this is baggage Carlos"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "3d83a126469eb35c",
+                    "spanID": "619fe7914f72e388",
+                    "flags": 1,
+                    "operationName": "/formatGreeting",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "3d83a126469eb35c",
+                            "spanID": "5c40c3bfaae64580"
+                        }
+                    ],
+                    "startTime": 1645157811549000,
+                    "duration": 8000,
+                    "tags": [
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "http.url",
+                            "type": "string",
+                            "value": "/formatGreeting"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "type": "float64",
+                            "value": 200
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1645157811549000,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "request_received"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1645157811557000,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "request_end"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "3d83a126469eb35c",
+                    "spanID": "5c40c3bfaae64580",
+                    "flags": 1,
+                    "operationName": "say-hello",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "3d83a126469eb35c",
+                            "spanID": "3d83a126469eb35c"
+                        }
+                    ],
+                    "startTime": 1645157811402000,
+                    "duration": 156000,
+                    "tags": [
+                        {
+                            "key": "response",
+                            "type": "string",
+                            "value": "Hello from service-b Carlos!"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1645157811402000,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "name"
+                                },
+                                {
+                                    "key": "message",
+                                    "type": "string",
+                                    "value": "this is a log message for name Carlos"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1645157811402000,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "baggage"
+                                },
+                                {
+                                    "key": "key",
+                                    "type": "string",
+                                    "value": "my-baggage"
+                                },
+                                {
+                                    "key": "value",
+                                    "type": "string",
+                                    "value": "Carlos"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "3d83a126469eb35c",
+                    "spanID": "3d83a126469eb35c",
+                    "flags": 1,
+                    "operationName": "/sayHello/Carlos",
+                    "references": [],
+                    "startTime": 1645157811399000,
+                    "duration": 164000,
+                    "tags": [
+                        {
+                            "key": "sampler.type",
+                            "type": "string",
+                            "value": "const"
+                        },
+                        {
+                            "key": "sampler.param",
+                            "type": "bool",
+                            "value": true
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "http.url",
+                            "type": "string",
+                            "value": "/sayHello/Carlos"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "type": "float64",
+                            "value": 200
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1645157811400000,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "request_received"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1645157811563000,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "request_end"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p2",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "service-b",
+                    "tags": [
+                        {
+                            "key": "client-uuid",
+                            "type": "string",
+                            "value": "0345abfd-3380-4bf7-aebb-32573198ee65"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "52a7f253d4c0"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "172.20.0.3"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "Node-3.19.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "service-a",
+                    "tags": [
+                        {
+                            "key": "client-uuid",
+                            "type": "string",
+                            "value": "f178aa79-ed68-4c56-93a4-3f570b4bf24a"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "6c7284aef370"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "172.20.0.4"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "Node-3.19.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}

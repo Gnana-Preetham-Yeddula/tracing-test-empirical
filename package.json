@@ -1,7 +1,7 @@
 {
-  "name": "typescript_project_framework",
+  "name": "tracing-test-empirical",
   "version": "1.0.0",
-  "description": "TypeScript NodeJS Project Framework",
+  "description": "checking jaeger + recursive tracing",
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
@@ -25,7 +25,6 @@
     "moment": "^2.24.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.1",
     "winston": "^3.2.1"
   },
   "devDependencies": {
@@ -39,7 +38,6 @@
     "@types/validator": "^10.11.3",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
-    "sequelize-auto": "git+https://github.com/realvariabledas/sequelize-auto.git",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",

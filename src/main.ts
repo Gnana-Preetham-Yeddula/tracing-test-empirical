@@ -10,6 +10,8 @@ import { ErrorHandler } from './error/ErrorHandler';
 // import { SetupRelations } from './data/entity/dbModels';
 import Keycloak from 'keycloak-connect';
 import session, { MemoryStore } from 'express-session';
+import { FirstService } from './service/FirstService';
+import { FirstController } from './controller/FirstController';
 
 const expressApp: express.Application = express();
 // expressOasGenerator.init(expressApp, {});
@@ -56,7 +58,8 @@ class Main {
                 DI.destroy();
                 next();
             })
-            expressApp.use('/', keycloak.protect(), DI.get<BaseController>(BaseController).getRouter());
+            expressApp.use('/', DI.get<BaseController>(BaseController).getRouter());
+            expressApp.use('/firstService',DI.get<FirstController>(FirstController).getRouter())
             expressApp.use(DI.get<ErrorHandler>(ErrorHandler).errorHandler);
     }
     
